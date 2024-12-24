@@ -8,6 +8,7 @@
     ## `npx tailwindcss init`
   - changed the config
   - add the tailwind directive to main css file
+  - Header
 
 # Features
 
@@ -22,5 +23,13 @@
     - Movie suggestion
       - MovieList \* N
 - NetflixGpt
+
   - search Bar
   - Movie suggestions
+
+  ## Add Routing to app
+
+  - Install react router dom
+    ### `npm i -D react-router-dom`
+  - use createBrowser router to create configuration
+  - use Router provider to provide the routes
