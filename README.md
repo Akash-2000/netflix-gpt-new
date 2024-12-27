@@ -9,6 +9,17 @@
   - changed the config
   - add the tailwind directive to main css file
   - Header
+  - sign up and sign in form
+  - validation
+  - use ref
+  - firebase setup
+  - deployed our app to production
+  - Firebase authentication
+  - sigin and sign up user
+  - created redux store
+  - create user slice
+  - BugFix - changed the OnAuth enables to navigate instead we statically given
+  - BugFix - clean onauthstate changes while unmount
 
 # Features
 
