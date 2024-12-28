@@ -20,6 +20,10 @@
   - create user slice
   - BugFix - changed the OnAuth enables to navigate instead we statically given
   - BugFix - clean onauthstate changes while unmount
+  - Add hard coded values to the constant files
+  - Registered TMDB and got acces token and API kwey
+  - Add api options
+  - create custom hook
 
 # Features
 
