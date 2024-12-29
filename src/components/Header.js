@@ -45,7 +45,7 @@ const Header = () => {
         <img src={LOGO} alt='logo' className='w-48'/>
         {user &&<div className='flex p-5'>
           <img className='w-10 h-10 rounded-md mr-2' src={user?.photoURL} alt="profilePic"/>
-          <p className='font-bold cursor-pointer' onClick={handleSignOut}>(sign Out)</p>
+          <p className='font-bold cursor-pointer text-white' onClick={handleSignOut}>(sign Out)</p>
         </div>}
     </div>
   )

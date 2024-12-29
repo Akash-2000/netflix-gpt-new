@@ -24,6 +24,9 @@
   - Registered TMDB and got acces token and API kwey
   - Add api options
   - create custom hook
+  - creted main and secondary cotnainers
+  - created videoTitle
+  - fetched the movie trailer
 
 # Features
 
