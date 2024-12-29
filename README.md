@@ -27,6 +27,8 @@
   - creted main and secondary cotnainers
   - created videoTitle
   - fetched the movie trailer
+  - Build secondary Page
+  - secondary page added
 
 # Features
 
