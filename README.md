@@ -31,6 +31,7 @@
   - secondary page added
   - added different movie categroies
   - browse page completed
+  - GPT search Page started
 
 # Features
 

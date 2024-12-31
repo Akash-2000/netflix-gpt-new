@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 
 import { auth } from '../utils/firebase'
 import { addUser, removeUser } from '../utils/userSlice'
+import { toggleGPTpage } from '../utils/GptSlice'
 import { LOGO } from '../utils/constants'
 
 
@@ -40,13 +41,26 @@ const Header = () => {
       
     });
   }
+
+  const toggleGPTPage = () => {
+    dispatch(toggleGPTpage())
+  }
+
+
   return (
     <div className='absolute bg-gradient-to-b from-black w-full h-36 pl-32 pt-5 z-20 flex items-center justify-between'>
         <img src={LOGO} alt='logo' className='w-48'/>
-        {user &&<div className='flex p-5'>
+        {user &&
+        <>
+        
+        <div className='flex p-5'>
+        <div className='px-4 py-2 bg-purple-800 text-white rounded-lg mx-3 cursor-pointer' onClick={toggleGPTPage}>
+          <p>GPT search</p>
+        </div>
           <img className='w-10 h-10 rounded-md mr-2' src={user?.photoURL} alt="profilePic"/>
           <p className='font-bold cursor-pointer text-white' onClick={handleSignOut}>(sign Out)</p>
-        </div>}
+        </div>
+        </>}
     </div>
   )
 }
