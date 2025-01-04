@@ -9,13 +9,14 @@ import { useDispatch } from 'react-redux'
 import { auth } from '../utils/firebase'
 import { addUser, removeUser } from '../utils/userSlice'
 import { toggleGPTpage } from '../utils/GptSlice'
-import { LOGO } from '../utils/constants'
-
+import { LANGUAGE_OPTIONS, LOGO } from '../utils/constants'
+import { updateLanguage } from '../utils/configsSlice'
 
 const Header = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const user = useSelector((store) => store.user)
+  const showGPTSearch = useSelector((store) => store.gpt.showGPTpage)
   useEffect(()=>{
    const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -46,14 +47,22 @@ const Header = () => {
     dispatch(toggleGPTpage())
   }
 
+  const onLanguageChange = (e) => {
+    dispatch(updateLanguage(e.target.value))
+  }
 
   return (
     <div className='absolute bg-gradient-to-b from-black w-full h-36 pl-32 pt-5 z-20 flex items-center justify-between'>
         <img src={LOGO} alt='logo' className='w-48'/>
         {user &&
         <>
-        
         <div className='flex p-5'>
+          {showGPTSearch &&
+        <select name='language' className='rounded-md' onChange={onLanguageChange}>
+          {LANGUAGE_OPTIONS?.map((language,index) => 
+          <option value={language.idenitfier} key={index}>{language.value}</option>
+          )}
+        </select>}
         <div className='px-4 py-2 bg-purple-800 text-white rounded-lg mx-3 cursor-pointer' onClick={toggleGPTPage}>
           <p>GPT search</p>
         </div>

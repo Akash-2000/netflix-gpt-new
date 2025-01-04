@@ -32,6 +32,7 @@
   - added different movie categroies
   - browse page completed
   - GPT search Page started
+  - GPT search lanaguage based changes added
 
 # Features
 

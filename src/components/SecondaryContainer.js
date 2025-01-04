@@ -7,7 +7,7 @@ const SecondaryContainer = () => {
   const topRatedMovies = useSelector((store => store.movies.topRatedMovies))
   const upcoming = useSelector((store) => store.movies.upCommingMovies)
   const popular = useSelector(store => store.movies.popularMovies) 
-  console.log(topRatedMovies, "topRatedMovies")
+ 
   if(moviesData === null) return null;
   return (
     <div className='bg-black'>
