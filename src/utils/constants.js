@@ -20,11 +20,14 @@ const LANGUAGE_OPTIONS = [
     idenitfier:"spanish", value:"española"
 }
 ]
+
+const MODEL_NAME="@cf/meta/llama-3-8b-instruct"
 export  {
     LOGO,
     USER_AVATAR,
     API_OPTIONS,
     IMAGE_CDN,
     BACKGROUND_IMAGE,
-    LANGUAGE_OPTIONS
+    LANGUAGE_OPTIONS,
+    MODEL_NAME
 }
