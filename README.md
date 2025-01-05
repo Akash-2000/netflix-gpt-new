@@ -33,6 +33,9 @@
   - browse page completed
   - GPT search Page started
   - GPT search lanaguage based changes added
+  - OPEN AI API Ditched me so i hookup with CLOUDFLARE (FEATURE) irritates me at first but it is my charm now
+  - suggestion page completed
+  - memoization added
 
 # Features
 

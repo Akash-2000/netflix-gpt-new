@@ -6,7 +6,7 @@ const useMovieSearch = async(movieString) => {
       const response = await fetch(url, API_OPTIONS)
       const json = await response.json()
 
-      return json.results[0]
+      return json.results
     } catch (error) {
       console.log(error,"error while search data")
     }

@@ -22,6 +22,7 @@ const LANGUAGE_OPTIONS = [
 ]
 
 const MODEL_NAME="@cf/meta/llama-3-8b-instruct"
+
 export  {
     LOGO,
     USER_AVATAR,
@@ -29,5 +30,5 @@ export  {
     IMAGE_CDN,
     BACKGROUND_IMAGE,
     LANGUAGE_OPTIONS,
-    MODEL_NAME
+    MODEL_NAME,
 }

@@ -1,13 +1,15 @@
 import React, { useRef } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { completeChat } from '../utils/GPTconnect'
 
 import { languages } from '../utils/languageConstants'
 import { MODEL_NAME } from '../utils/constants'
+import { addRecommendedMovies } from '../utils/GptSlice'
+import { updateRecommendationLoading } from '../utils/GptSlice'
 import useMovieSearch from '../hooks/useSearchMovies'
 
 const GptSearchBar = () => {
-
+  const dispatch = useDispatch()
   const userLanguage = useSelector((store) => store.config.userlanguage)
   const searchTerm = useRef(null)
   const movieSearch = useMovieSearch
@@ -20,6 +22,7 @@ const GptSearchBar = () => {
 
     //cloud flare ai integrations
   try {
+    dispatch(updateRecommendationLoading())
     const completion = await completeChat(MODEL_NAME, {
       messages: [
         {
@@ -38,12 +41,12 @@ const GptSearchBar = () => {
     let searchdata = movieList.map((movie) => movieSearch(movie))
     
     let movieListData = await Promise.all(searchdata)
-    console.log(movieListData)
+    dispatch(addRecommendedMovies({names:movieList, moviesResults:movieListData}))
+    dispatch(updateRecommendationLoading())
+
   } catch (error) {
     console.warn(error, "my error messsage")
   }
-  
-  
 
   }
   
