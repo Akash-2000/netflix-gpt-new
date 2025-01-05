@@ -17,7 +17,7 @@ const SecondaryContainer = () => {
          - Movie cards
          */
       }
-      <div className='-mt-60 z-50 relative'>
+      <div className='md:-mt-60 z-50 relative'>
       <MovieList title={"Now playing"} movies={moviesData}/>
       <MovieList title={"upcomming"} movies={upcoming}/>
       <MovieList title={"Popular"} movies={popular}/>

@@ -52,7 +52,7 @@ const GptSearchBar = () => {
   
   return (
     <div className='z-10 w-full pt-52 '>
-      <form className='w-1/2  grid grid-cols-12 gap-2 h-24 m-auto items-center bg-black p-3 rounded-md' onSubmit={(e) =>handleGPTsearch(e)}>
+      <form className='md:w-1/2  grid grid-cols-12 gap-2 h-24 m-auto items-center bg-black p-3 rounded-md' onSubmit={(e) =>handleGPTsearch(e)}>
         <div className='col-span-9'>
           <input type='text' placeholder={languages[userLanguage].placeholder} className='p-4 border w-full rounded-md' ref={searchTerm}/>
         </div>
