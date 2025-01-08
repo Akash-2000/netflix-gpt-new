@@ -7,7 +7,6 @@ import MovieListShimmer from '../shimmer.js/MovieListShimmer'
 
 const GptMovieSuggestions = () => {
   const {movieNames, movieResults, isRecommendationLoading} = useSelector((store) => store.gpt)
-  console.log(movieNames, movieResults)
   if(isRecommendationLoading){
     return (
       <div className='p-5 m-4 bg-black bg-opacity-50'>

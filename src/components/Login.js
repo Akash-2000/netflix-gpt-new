@@ -26,8 +26,6 @@ const Login = () => {
     e.preventDefault()
 
     // Email and password
-    console.log(email.current.value)
-    console.log(password.current.value)
 
     // validate
     const message = checkValidate(email.current.value, password.current.value)
@@ -78,10 +76,12 @@ const Login = () => {
     <div>
         <Header/>
         <div className='absolute'>
-            <img src={BACKGROUND_IMAGE}
+            <img
+             src={BACKGROUND_IMAGE}
+            className='h-screen object-cover  md:h-auto md:object-contain'
             alt="backgroundImage"/>
         </div>
-        <div className='bg-black absolute left-0 right-0 top-36 w-1/5 m-auto p-7 bg-opacity-80'>
+        <div className='bg-black absolute left-0 right-0 top-36 w-3/4  rounded-md md:w-1/5 m-auto p-7 bg-opacity-80'>
           <p className='font-bold text-2xl text-white'>{isSignInForm?"Sign In" : "Sign Up"}</p>
           <form onSubmit={handleFormSubmit}>
             {!isSignInForm && ( <input type='text' ref={name} className='p-2 my-3 w-full bg-gray-600 rounded-md' placeholder='Enter name'/>)}

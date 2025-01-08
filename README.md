@@ -36,6 +36,14 @@
   - OPEN AI API Ditched me so i hookup with CLOUDFLARE (FEATURE) irritates me at first but it is my charm now
   - suggestion page completed
   - memoization added
+  - responsiveness added
+  - deployed the backend with zoho catalyst Im very new to zoho catalyst it makes me to pull my hair a little but it worth spending time with
+    - Install catalyst cli
+    - catalyst init
+    - catalyst serve (to test)
+    - catalyst deploy (to deploy)
+    - add domain in authentication to avoid CORS
+    - add env files in config to avoid unexpected errors
 
 # Features
 

@@ -1,7 +1,8 @@
 
+//https://appsail-50024371272.development.catalystappsail.in
 const  completeChat = async(model, input) => {
     const response = await fetch(
-      `http://localhost:4000/run-chat`,
+      `https://appsail-50024371272.development.catalystappsail.in/run-chat`,
       {
         method: "POST",
         headers: {
@@ -12,7 +13,6 @@ const  completeChat = async(model, input) => {
       }
     );
     const result = await response.json();
-    console.log(result)
     return result;
   }
   
